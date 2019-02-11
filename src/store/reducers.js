@@ -5,7 +5,7 @@ import {
     ACTION_SET_ACTIVE_BOOK,
 } from '../store/actionConsts';
 
-import books from '../Data/books';
+import books from '../data/books';
 
 const initialState = {
     books: books,

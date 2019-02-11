@@ -7,10 +7,21 @@ import * as serviceWorker from './serviceWorker';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
 import { rootReduser } from "./store/reducers";
 
+import firebase from 'firebase';
+
 const store = createStore( rootReduser );
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyBLOO7RXOL50ZuzOgITs0q7S0DHnfImVhw",
+    authDomain: "my-personal-library-app.firebaseapp.com",
+    databaseURL: "https://my-personal-library-app.firebaseio.com",
+    storageBucket: "my-personal-library-app.appspot.com",
+};
+
+firebase.initializeApp(config);
 
 ReactDOM.render(
     <Provider store={ store }>
