@@ -29,6 +29,7 @@
     margin: 1rem;
     background: #0f81cc;
     text-align: start;
+    box-shadow: 10px 10px  15px #2f2f2f;
 }
 
 .navbar {
@@ -56,6 +57,7 @@
     flex-wrap: wrap;
     justify-items: center;
     padding: 1rem;
+
 }
 
 .auth {
@@ -69,6 +71,14 @@
 .new-book-button h1{
     font-size: 60px;
     font-weight: bold;
+}
+
+.button.is-fullwidth {
+    margin: 0.5rem 0;
+}
+
+.label{
+    margin: 10px;
 }
 
 #book-form {

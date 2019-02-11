@@ -34,7 +34,7 @@ class BookData extends Component {
                     <li>{ book.name }</li>
                     <li>{ book.author }</li>
                     <li>{ book.rate }</li>
-                    <li>Data: { book.date }</li>
+                    <li>Date: { book.date }</li>
                 </ul>
             </div>
         );

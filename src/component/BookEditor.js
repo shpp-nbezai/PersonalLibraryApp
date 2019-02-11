@@ -241,7 +241,7 @@ class BookEditor extends Component {
                 </div>
                 <div>
                     <button
-                        className="button is-link"
+                        className="button is-link is-fullwidth"
                         disabled={ !formValid }
                         onClick={ () => {
                             const book = {
@@ -258,14 +258,14 @@ class BookEditor extends Component {
                         Save book
                     </button>
                     <button
-                        className="button is-link"
+                        className="button is-link is-fullwidth"
                         onClick={ () => {
                             updateAppData({ bookEditor: false });
                         }}>
                         Cancel
                     </button>
                     <button
-                        className="button is-link"
+                        className="button is-link is-fullwidth"
                         onClick={ () => {
                             removeBook( id );
                             updateAppData({ bookEditor: false });

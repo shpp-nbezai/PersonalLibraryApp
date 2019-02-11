@@ -170,7 +170,7 @@ class BooksMain extends Component {
                 render = {({ data }) => {
                     return (
                         <div className="content">
-                            <div className="has-background-grey book-list-wrapper">
+                            <div className="book-list-wrapper">
                                 <section className="section is-gapless">
                                     <BooksList
                                         data = { data }
