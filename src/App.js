@@ -3,7 +3,9 @@ import './App.css';
 import Navbar from './component/layout/Navbar';
 import BookMain from './component/BookMain';
 import connect from "react-redux/es/connect/connect";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import SignIn from './component/auth/SignIn';
+import SignUp from './component/auth/SignUp';
 
 class App extends Component {
 
@@ -12,7 +14,11 @@ class App extends Component {
             <BrowserRouter>
                 <div className="flex-container">
                     <Navbar/>
-                    <BookMain/>
+                    <Switch>
+                        <Route exact path='/' component={ BookMain }/>
+                        <Route path='/signin' component={ SignIn }/>
+                        <Route path='/signup' component={ SignUp }/>
+                    </Switch>
                 </div>
             </BrowserRouter>
         );
