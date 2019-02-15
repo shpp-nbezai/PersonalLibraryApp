@@ -4,7 +4,7 @@ import BooksList from "./BooksList";
 import GoToPage from "./GoToPage";
 import PageIndicator from "./PageIndicator";
 import Navigation from "./Navigation";
-import NavBar from "./NavBar";
+import Aside from "./Aside";
 import connect from "react-redux/es/connect/connect";
 
 import { bindActionCreators } from "redux";
@@ -206,7 +206,7 @@ class BooksMain extends Component {
                                 </div>
                             </div>
                             <div className="navbar has-background-primary">
-                                <NavBar
+                                <Aside
                                     handleChangeSearchQuery = { (e) => this.handleChangeSearchQuery(e) }
                                     searchQuery = { searchQuery }
                                     setPaginate = { this.setPaginate }

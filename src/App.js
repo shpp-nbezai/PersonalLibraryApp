@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './component/Header';
+import Navbar from './component/layout/Navbar';
 import BookMain from './component/BookMain';
 import connect from "react-redux/es/connect/connect";
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
 
     render() {
         return (
-            <div className="flex-container">
-                <Header/>
-                <BookMain/>
-            </div>
+            <BrowserRouter>
+                <div className="flex-container">
+                    <Navbar/>
+                    <BookMain/>
+                </div>
+            </BrowserRouter>
         );
     }
 }
