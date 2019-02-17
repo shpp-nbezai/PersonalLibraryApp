@@ -20,12 +20,11 @@ export default ({
 
     return (
         <div className="book-list">
-
             <div
-                className="book has-text-white has-background-primary button new-book-button"
+                className="book has-background-grey-dark button new-book-button"
                 onClick={ () => addNewBook()}
             >
-                <h1>+</h1>
+                <h1 className="has-text-white">+</h1>
             </div>
             { books }
         </div>

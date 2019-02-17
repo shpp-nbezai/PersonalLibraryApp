@@ -173,7 +173,7 @@ class BookEditor extends Component {
 
         return (
             <form id="book-form" >
-                <label htmlFor="name" className="label">
+                <label htmlFor="name" className="label has-text-white">
                     Book name
                 </label>
                 <input
@@ -187,7 +187,7 @@ class BookEditor extends Component {
                     maxLength="30"
                     onChange={ (e) => this.handleBookInput(e) }
                 />
-                <label htmlFor="author" className="label">
+                <label htmlFor="author" className="label has-text-white">
                     Author
                 </label>
                 <input
@@ -201,7 +201,7 @@ class BookEditor extends Component {
                     maxLength="30"
                     onChange={ (e) => this.handleBookInput(e) }
                 />
-                <label htmlFor="date" className="label">
+                <label htmlFor="date" className="label has-text-white">
                     Date
                 </label>
                 <input
@@ -214,7 +214,7 @@ class BookEditor extends Component {
                     value={ date }
                     onChange={ (e) => this.handleBookInput(e) }
                 />
-                <label htmlFor="rate" className="label">
+                <label htmlFor="rate" className="label has-text-white">
                     Rate
                 </label>
                 <RateSetter
@@ -222,7 +222,7 @@ class BookEditor extends Component {
                     maxRate={ maxRate }
                     handleBookRate={ (e) => this.handleBookInput(e) }
                 />
-                <label htmlFor="image" className="label">
+                <label htmlFor="image" className="label has-text-white">
                     Backgraund image URL
                 </label>
                 <input

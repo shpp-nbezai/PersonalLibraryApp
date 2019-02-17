@@ -17,7 +17,7 @@ export default ({
                 }) => {
 
     return (
-        <div className=" has-background-primary">
+        <div className=" has-background-grey-dark">
             {
                 bookEditor ?
                     <BookEditor

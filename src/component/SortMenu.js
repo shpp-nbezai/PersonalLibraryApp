@@ -12,11 +12,11 @@ export default ({
                 }) => {
 
         return (
-            <div className="has-background-primary">
+            <div className="has-background-grey-dark has-text-white">
                 <div className="">
                     <label
                         htmlFor="search"
-                        className="label">
+                        className="label has-text-white">
                         Search
                     </label>
                     <input
@@ -29,7 +29,7 @@ export default ({
                 <div className="">
                     <label
                         htmlFor="sort"
-                        className="label">
+                        className="label has-text-white">
                         Sort By
                     </label>
                     <div>
@@ -43,7 +43,7 @@ export default ({
                 <div className="">
                     <label
                         htmlFor="paginate"
-                        className="label">
+                        className="label has-text-white">
                         Paginate By
                     </label>
                     <div className="select" id="paginate">

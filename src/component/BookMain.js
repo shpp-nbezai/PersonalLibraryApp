@@ -14,7 +14,7 @@ class BooksMain extends Component {
     constructor( props ) {
         super( props );
         const initItemsPerPage = 5;
-        const initPages = Math.ceil( props.books.length / initItemsPerPage );
+        const INIT_PAGES = Math.ceil( props.books.length / initItemsPerPage );
 
         this.state = {
             sortBy: "id",
@@ -26,7 +26,7 @@ class BooksMain extends Component {
             searchQuery: '',
             data: props.books,
             maxRate: 5, //maximum book rating value
-            pages: initPages,
+            pages: INIT_PAGES,
         };
 
     }
@@ -38,8 +38,7 @@ class BooksMain extends Component {
 
         this.setState({
             data: books,
-            }
-        );
+        });
     }
 
     addNewBook = () => {
@@ -205,7 +204,7 @@ class BooksMain extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="navbar has-background-primary">
+                            <div className="navbar has-background-grey-dark has-text-white">
                                 <Aside
                                     handleChangeSearchQuery = { (e) => this.handleChangeSearchQuery(e) }
                                     searchQuery = { searchQuery }
