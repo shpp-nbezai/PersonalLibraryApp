@@ -7,11 +7,11 @@ import * as serviceWorker from './serviceWorker';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { rootReduser } from "./store/reducers";
+import rootReducer from "./store/reducers/booksReducer";
 
 import firebase from 'firebase';
 
-const store = createStore( rootReduser );
+const store = createStore( rootReducer );
 
 // Initialize Firebase
 var config = {

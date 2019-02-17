@@ -3,24 +3,26 @@ import {
     ACTION_UPDATE_BOOK,
     ACTION_ADD_BOOK,
     ACTION_SET_ACTIVE_BOOK,
-} from '../store/actionConsts';
+} from '../actionConsts';
 
-import books from '../data/books';
+import books from '../../data/books';
 
 const initialState = {
     books: books,
     activeBook: null
-}
+};
 
-export const rootReduser = ( state = initialState, action ) => {
+const booksReducer = ( state = initialState, action ) => {
     switch ( action.type ) {
         case ACTION_REMOVE_BOOK:
             {
                 let books = [];
-                state.books.forEach( item => {
-                    if ( item.id !== action.payload ) books.push( item );
+
+                books = state.books.filter(book => {
+                    return book.id !== action.payload
                 });
-                return { ...state, books: books };
+
+                return { ...state, books };
             }
 
         case ACTION_SET_ACTIVE_BOOK:
@@ -31,25 +33,27 @@ export const rootReduser = ( state = initialState, action ) => {
         case ACTION_UPDATE_BOOK:
             {
                 let books = [];
-                state.books.forEach( item => {
-                    if ( item.id === action.payload.id )
-                    {
-                        books.push( action.payload );
+
+                books = state.books.map(book => {
+                    if ( book.id === action.payload.id ) {
+                        return {...action.payload}
                     } else {
-                        books.push( item );
-                    };
+                        return book;
+                    }
                 });
-                return { ...state, books: books };
+
+                return { ...state, books };
             }
 
         case ACTION_ADD_BOOK:
             {
-                const newBookId = state.books[ state.books.length - 1 ].id + 1;
-                action.payload.id = newBookId;
+                action.payload.id = state.books[ state.books.length - 1 ].id + 1;
                 let books = [ ...state.books, action.payload ];
                 return { ...state, books };
             }
         default: break
     }
     return state;
-}
+};
+
+export default booksReducer;
